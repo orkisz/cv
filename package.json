@@ -1,0 +1,24 @@
+{
+  "name": "@orkisz/cv",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:css && postcss --use autoprefixer --output css/style.css css/style.css",
+    "build:css": "node-sass --output-style compressed css/style.sass css/style.css",
+    "watch": "node-sass --watch --output-style compressed css/style.sass css/style.css"
+  },
+  "author": "Krzysztof Orkisz",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "0.9.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "node-sass": ">=6.0.1",
+    "postcss": "^8.3.8",
+    "postcss-cli": "^9.0.1"
+  }
+}
