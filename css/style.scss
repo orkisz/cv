@@ -1,0 +1,64 @@
+@charset "utf-8";
+$family-sans-serif: "Poppins", Helvetica, Arial, sans-serif;
+//$size-5: 20px
+//$size-6: 16px
+//$nav-height: 44px
+@import "../node_modules/bulma/bulma";
+
+//.hero-head
+//  padding-left: 10px
+
+.dots {
+  background: url('/assets/dots.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  transform: rotateZ(222deg) translate3d(-3px, 366px, 0px);
+  filter: opacity(0.2);
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: $black-bis;
+}
+
+h2 {
+  border-bottom: 2px solid;
+  color: $black-bis;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #5c8fd8;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  border-top: 1px solid;
+  font-size: 1.25rem;
+
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+h5 {
+  color: #5c8fd8;
+  font-size: 1.1rem;
+}
+
+time {
+  color: $grey;
+  display: block;
+}
+
+i.fa {
+  margin-right: 5px;
+}
