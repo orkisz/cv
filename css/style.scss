@@ -66,4 +66,17 @@ i.fa {
 ul {
   list-style: disc;
   margin-left: 24px;
+
+  &.crumbs {
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      display: inline;
+      border-bottom: 2px solid;
+      padding: 0 5px;
+      line-height: 2.5rem;
+      margin: 0 5px;
+    }
+  }
 }
