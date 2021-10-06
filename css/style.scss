@@ -21,17 +21,20 @@ $family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
 }
 
 h1 {
-  font-size: 2.7rem;
+  font-size: $size-1;
   font-weight: 600;
   color: $black-bis;
+  text-transform: uppercase;
 }
 
 h2 {
   border-bottom: 2px solid;
   color: $black-bis;
-  font-size: 2rem;
+  font-size: $size-3;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: $size-7;
+  line-height: 1.2;
 }
 
 h3 {
@@ -42,7 +45,7 @@ h3 {
 
 h4 {
   border-top: 1px solid;
-  font-size: 1.25rem;
+  font-size: $size-5;
 
   &:first-of-type {
     border-top: none;
@@ -51,7 +54,7 @@ h4 {
 
 h5 {
   color: #5c8fd8;
-  font-size: 1.1rem;
+  font-size: $size-5;
 }
 
 time {
@@ -77,6 +80,21 @@ ul {
       padding: 0 5px;
       line-height: 2.5rem;
       margin: 0 5px;
+    }
+  }
+}
+
+section {
+  &:not(:first-of-type) {
+    h2 {
+      margin-top: $size-2;
+    }
+  }
+
+  h4 {
+    &:not(:first-of-type) {
+      margin-top: $size-6;
+      padding-top: $size-6;
     }
   }
 }
