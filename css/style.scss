@@ -4,6 +4,7 @@ $family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
 //$size-6: 16px
 //$nav-height: 44px
 $primary: #4C8CBA;
+$column-gap: 1.5rem;
 @import "../node_modules/bulma/bulma";
 
 //.hero-head
@@ -12,14 +13,15 @@ $primary: #4C8CBA;
 $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
 
 .dots {
-  background: url('../assets/dots.png');
+  background: url(../assets/dots.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
-  position: fixed;
+  height: 70vh;
+  position: absolute;
   z-index: -1;
-  transform: rotateZ(222deg) translate3d(-3px, 366px, 0px);
+  transform: rotateZ(
+                  222deg) translate3d(-213px, 420px, 0px);
   filter: opacity(0.2);
 }
 
@@ -51,7 +53,7 @@ h3 {
 
 h4 {
   font-family: $family-sans-serif-secondary;
-  border-top: 1px solid;
+  border-top: 1px solid  $grey-light;
   font-size: $size-5;
 
   &:first-of-type {
@@ -80,14 +82,14 @@ ul {
   &.crumbs {
     list-style: none;
     margin-left: 0;
-    //font-family: $family-sans-serif-secondary;
+    margin-top: 1rem;
+    margin-bottom: -5px;
 
     li {
-      display: inline;
-      border-bottom: 2px solid;
-      padding: 0 5px;
-      line-height: 2.5rem;
-      margin: 0 5px;
+      display: inline-block;
+      border-bottom: 2px solid $grey-lighter;
+      padding: 0 5px 5px 0;
+      margin: 0 5px 11px 5px;
     }
   }
 
@@ -98,7 +100,7 @@ ul {
 
     li {
       &:not(:last-child) {
-        border-bottom: 1px solid;
+        border-bottom: 1px solid $grey-light;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
       }
