@@ -161,3 +161,15 @@ section {
     background-color: $grey-darker;
   }
 }
+
+.photo-container {
+  justify-content: center;
+
+  @include from($tablet) {
+    justify-content: right;
+  }
+
+  @media print {
+    justify-content: right;
+  }
+}
