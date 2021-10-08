@@ -4,6 +4,8 @@ node_js:
 
 script:
   - npm run build
+  - cat .gitignore | grep -v 'css/style.css' > .gitignore-new
+  - mv .gitignore-new .gitignore
 
 deploy:
   provider: pages
