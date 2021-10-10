@@ -34,14 +34,14 @@ $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
   background: url(../assets/dots.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   top: 0;
   right: 0;
   position: absolute;
   z-index: -1;
-  transform: rotateZ(222deg) translate3d(-80px, 484px, 0px);
-  filter: opacity(0.2);
+  transform: rotateZ(222deg) translate3d(-130px, 483px, 0px);
+  filter: opacity(0.15);
 }
 
 a {
@@ -55,7 +55,7 @@ a {
 h1 {
   font-family: $family-sans-serif-secondary;
   font-size: $size-1;
-  font-weight: 600;
+  font-weight: 800;
   color: $black-bis;
   text-transform: uppercase;
 }
@@ -65,7 +65,7 @@ h2 {
   border-bottom: 2px solid;
   color: $black-bis;
   font-size: $size-3;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
   margin-bottom: $size-7;
   line-height: 1.2;
@@ -107,6 +107,10 @@ i.fa {
 ul {
   list-style: disc;
   margin-left: 24px;
+
+  li {
+    line-height: 1.6;
+  }
 
   &.crumbs {
     list-style: none;
