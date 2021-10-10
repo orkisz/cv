@@ -31,16 +31,25 @@ $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
 }
 
 .dots {
-  background: url(../assets/dots.png);
+  background: url(../assets/dots.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 70vh;
+  width: 800px;
+  height: 800px;
+  top: 0;
+  right: 0;
   position: absolute;
   z-index: -1;
-  transform: rotateZ(
-                  222deg) translate3d(-213px, 420px, 0px);
+  transform: rotateZ(222deg) translate3d(-80px, 484px, 0px);
   filter: opacity(0.2);
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1 {
@@ -71,7 +80,7 @@ h3 {
 
 h4 {
   font-family: $family-sans-serif-secondary;
-  border-top: 1px solid  $grey-light;
+  border-top: 1px solid $grey-light;
   font-size: $size-5;
 
   &:first-of-type {
@@ -82,11 +91,13 @@ h4 {
 h5 {
   color: $primary;
   font-size: $size-5;
+  line-height: 1.8;
 }
 
 time {
   color: $grey;
   display: block;
+  line-height: 1.8;
 }
 
 i.fa {
@@ -189,5 +200,11 @@ section {
 
   @media print {
     justify-content: right;
+  }
+}
+
+.contact-info {
+  i.fa {
+    color: $primary;
   }
 }
