@@ -1,32 +1,17 @@
 @charset "utf-8";
 $family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
-//$size-5: 20px
-//$size-6: 16px
-//$nav-height: 44px
 $primary: #4C8CBA;
 $column-gap: 1.5rem;
 @import "../node_modules/bulma/bulma";
 
-//.hero-head
-//  padding-left: 10px
-
 $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
 
-//body {
-//  @media print {
-//    font-size: 1.25rem;
-//  }
-//}
-
-@media print {
-  .column.is-7-print {
-    flex: none;
-    width: 58.33333%;
-  }
-
-  .column.is-5-print {
-    flex: none;
-    width: 41.66667%;
+@for $i from 1 through 12 {
+  @media print {
+    .column.is-#{$i}-print {
+      flex: none;
+      width: percentage($i / 12);
+    }
   }
 }
 
