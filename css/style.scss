@@ -197,3 +197,9 @@ section {
     color: $primary;
   }
 }
+
+html {
+  @media print {
+    font-size: 15px;
+  }
+}
