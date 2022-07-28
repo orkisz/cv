@@ -1,7 +1,10 @@
 @charset "utf-8";
+@use "sass:math";
+
 $family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
 $primary: #4C8CBA;
 $column-gap: 1.5rem;
+
 @import "../node_modules/bulma/bulma";
 
 $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
@@ -10,7 +13,7 @@ $family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
   @media print {
     .column.is-#{$i}-print {
       flex: none;
-      width: percentage($i / 12);
+      width: percentage(math.div($i, 12));
     }
   }
 }
