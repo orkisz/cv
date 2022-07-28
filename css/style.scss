@@ -1,0 +1,208 @@
+@charset "utf-8";
+@use "sass:math";
+
+$family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+$primary: #4C8CBA;
+$column-gap: 1.5rem;
+
+@import "../node_modules/bulma/bulma";
+
+$family-sans-serif-secondary: "Lora", Helvetica, Arial, sans-serif;
+
+@for $i from 1 through 12 {
+  @media print {
+    .column.is-#{$i}-print {
+      flex: none;
+      width: percentage(math.div($i, 12));
+    }
+  }
+}
+
+.dots {
+  background: url(../assets/dots.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 900px;
+  height: 900px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  transform: rotateZ(222deg) translate3d(-130px, 483px, 0px);
+  filter: opacity(0.15);
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-family: $family-sans-serif-secondary;
+  font-size: $size-1;
+  font-weight: 800;
+  color: $black-bis;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $family-sans-serif-secondary;
+  border-bottom: 2px solid;
+  color: $black-bis;
+  font-size: $size-3;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: $size-7;
+  line-height: 1.2;
+}
+
+h3 {
+  font-family: $family-sans-serif-secondary;
+  color: $primary;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: $family-sans-serif-secondary;
+  border-top: 1px solid $grey-light;
+  font-size: $size-5;
+
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+h5 {
+  color: $primary;
+  font-size: $size-5;
+  line-height: 1.8;
+}
+
+time {
+  color: $grey;
+  display: block;
+  line-height: 1.8;
+}
+
+i.fa {
+  margin-right: 5px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 24px;
+
+  li {
+    line-height: 1.6;
+  }
+
+  &.crumbs {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: -5px;
+
+    li {
+      display: inline-block;
+      border-bottom: 2px solid $grey-lighter;
+      padding: 0 5px 5px 0;
+      margin: 0 5px 11px 5px;
+    }
+  }
+
+  &.passions, &.languages {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1rem;
+
+    li {
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-light;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &.passions {
+    li {
+      i.fa {
+        color: $primary;
+      }
+    }
+  }
+
+  &.languages {
+    li {
+      > * {
+        &:first-child {
+          width: 30%;
+        }
+
+        &:nth-child(2) {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+section {
+  &:not(:first-of-type) {
+    h2 {
+      margin-top: $size-2;
+    }
+  }
+
+  h4 {
+    &:not(:first-of-type) {
+      margin-top: $size-6;
+      padding-top: $size-6;
+    }
+  }
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+}
+
+.progress {
+  background-color: $grey-darker;
+
+  &::-moz-progress-bar {
+    background-color: $grey-darker;
+  }
+
+  &::-webkit-progress-bar {
+    background-color: $grey-darker;
+  }
+}
+
+.photo-container {
+  justify-content: center;
+
+  @include from($tablet) {
+    justify-content: right;
+  }
+
+  @media print {
+    justify-content: right;
+  }
+}
+
+.contact-info {
+  i.fa {
+    color: $primary;
+  }
+}
+
+html {
+  @media print {
+    font-size: 15px;
+  }
+}
