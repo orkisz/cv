@@ -55,8 +55,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prepare
+        run: "mkdir -p public/css && cp index.html public/ && cp css/style.css public/css"
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./public
