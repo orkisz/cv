@@ -8,7 +8,7 @@
     "live-server": "live-server",
     "start": "concurrently \"npm run watch\" \"npm run live-server -- --no-browser --ignore=**/*.scss\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build:css && postcss --use autoprefixer --output css/style.css css/style.css",
+    "build": "npm run build:css && postcss --use autoprefixer --output css/style.css css/style.css && mkdir -p public/css && cp index.html public/ && cp css/style.css public/css && cp -a assets public/",
     "build:css": "sass --no-source-map css/style.scss css/style.css",
     "watch": "sass --watch css/style.scss css/style.css"
   },

@@ -55,8 +55,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Prepare
-        run: "mkdir -p public/css && cp index.html public/ && cp css/style.css public/css && cp -a assets public/"
+      # - name: Prepare
+      #   run: "mkdir -p public/css && cp index.html public/ && cp css/style.css public/css && cp -a assets public/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
