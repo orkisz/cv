@@ -206,3 +206,15 @@ html {
     font-size: 15px;
   }
 }
+
+.print-hidden {
+  @media print {
+    display: none;
+  }
+}
+
+.print-page-break {
+  @media print {
+    break-after: page;
+  }
+}
