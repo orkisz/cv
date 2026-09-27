@@ -22,7 +22,7 @@
     "concurrently": "7.3.0",
     "live-server": "^1.2.2",
     "sass": "1.54.0",
-    "postcss": "^8.3.8",
+    "postcss": "^8.5.23",
     "postcss-cli": "^9.0.1"
   }
 }

@@ -92,6 +92,11 @@ i.fa {
   margin-right: 5px;
 }
 
+strong:has(+ ul) {
+  display: inline-block;
+  margin-block: .25rem;
+}
+
 ul {
   list-style: disc;
   margin-left: 24px;
