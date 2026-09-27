@@ -59,14 +59,14 @@ h2 {
   line-height: 1.2;
 }
 
-h3 {
+.tagline {
   font-family: $family-sans-serif-secondary;
   color: $primary;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-h4 {
+h3 {
   font-family: $family-sans-serif-secondary;
   border-top: 1px solid $grey-light;
   font-size: $size-5;
@@ -76,7 +76,7 @@ h4 {
   }
 }
 
-h5 {
+h4 {
   color: $primary;
   font-size: $size-5;
   line-height: 1.8;
@@ -163,7 +163,7 @@ section {
     }
   }
 
-  h4 {
+  h3 {
     &:not(:first-of-type) {
       margin-top: $size-6;
       padding-top: $size-6;
